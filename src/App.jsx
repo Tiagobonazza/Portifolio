@@ -33,7 +33,7 @@ function App() {
         </div>
         <div className="sidebar-footer">
           <div className="sidebar-profile">
-            <div className="sidebar-avatar">TB</div>
+            <div className="sidebar-avatar"><img src={logo} alt="Logo" /></div>
             <div className="sidebar-profile-info">
               <span className="sidebar-profile-name">Tiago Bonassa</span>
               <span className="sidebar-profile-role">Desenvolvedor & Criador Digital</span>
@@ -99,6 +99,7 @@ function App() {
               <h3 className="info-title">SOBRE MIM</h3>
               <p className="info-text">Sou apaixonado por tecnologia e inovação. Trabalho há mais de 10 anos desenvolvendo soluções digitais que ajudam marcas e negócios a se destacarem no mundo online.</p>
               <p className="info-text">Meu foco é criar projetos funcionais, bonitos e com propósito.</p>
+              <p className="info-text">Atualmente trabalho como desenvolvedor no Ministério da Fazenda.</p>
               <div className="info-stats">
                 <div className="stat">
                   <span className="stat-icon">

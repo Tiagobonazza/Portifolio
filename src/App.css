@@ -57,23 +57,28 @@
 
 .sidebar-profile {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
   cursor: pointer;
 }
 
 .sidebar-avatar {
-  width: 34px;
-  height: 34px;
-  border-radius: 8px;
-  background: #f5c518;
-  color: #000;
-  font-weight: 800;
-  font-size: 0.72rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #000;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  overflow: hidden;
+  align-self: flex-start;
+}
+
+.sidebar-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .sidebar-profile-info {
@@ -357,15 +362,34 @@
 .btn-secondary {
   background: transparent;
   color: #fff;
-  border: 1px solid #fff;
+  border: 1px solid rgba(255,255,255,0.4);
   padding: 8px 18px;
   border-radius: 6px;
   font-weight: 600;
   font-size: clamp(0.7rem, 1vw, 0.85rem);
   cursor: pointer;
-  transition: background 0.2s;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s, border-color 0.3s, box-shadow 0.3s;
 
-  &:hover { background: rgba(255,255,255,0.1); }
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.08) 50%, transparent 100%);
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+  }
+
+  &:hover {
+    color: #fff;
+    border-color: #fff;
+    box-shadow: 0 0 14px rgba(255,255,255,0.2), 0 0 30px rgba(255,255,255,0.08);
+  }
+
+  &:hover::before {
+    transform: translateX(100%);
+  }
 }
 
 .banner-available {
