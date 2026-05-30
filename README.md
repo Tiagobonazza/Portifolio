@@ -1,16 +1,44 @@
-# React + Vite
+# Portifólio - Tiago Bonassa
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Dependências
 
-Currently, two official plugins are available:
+### Dependencies
+| Pacote | Versão |
+|--------|--------|
+| react | ^19.2.6 |
+| react-dom | ^19.2.6 |
+| lucide-react | ^1.17.0 |
+| react-draggable | ^4.6.0 |
+| react-icons | ^5.6.0 |
+| react-router-dom | ^7.16.0 |
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### DevDependencies
+| Pacote | Versão |
+|--------|--------|
+| vite | ^8.0.12 |
+| @vitejs/plugin-react | ^6.0.1 |
+| eslint | ^10.3.0 |
+| eslint-plugin-react-hooks | ^7.1.1 |
+| eslint-plugin-react-refresh | ^0.5.2 |
+| @eslint/js | ^10.0.1 |
+| @types/react | ^19.2.14 |
+| @types/react-dom | ^19.2.3 |
+| globals | ^17.6.0 |
 
-## React Compiler
+## Instalação
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+```
 
-## Expanding the ESLint configuration
+## Rodar o projeto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
