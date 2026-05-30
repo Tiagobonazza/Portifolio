@@ -98,14 +98,14 @@ export default function ElectricButton({ children, onClick, className }) {
         setHovered(false)
         clearInterval(hoverInterval.current)
       }}
-      style={(hovered || clicked) ? { background: colors[colorIndex], color: '#000', borderColor: colors[colorIndex], transition: 'background 0.3s, color 0.3s, border-color 0.3s' } : {}}
+      style={(hovered || clicked) ? { background: colors[colorIndex], color: '#000', borderColor: colors[colorIndex], transition: 'background 0.3s, color 0.3s, border-color 0.3s' } : { color: className?.includes('btn-primary') ? '#000' : undefined }}
     >
       <span className="electric-arcs">
         {[...Array(4)].map((_, i) => (
           <span key={i} className={`arc arc-${i}`} />
         ))}
       </span>
-      <span className="btn-label">{children}</span>
+      <span className="btn-label" style={{ color: '#000' }}>{children}</span>
       <svg className="sparks-canvas" aria-hidden="true">
         {floating.map(p => (
           <circle
