@@ -3,76 +3,57 @@ import menuLateral from './assets/Menu Lateral.png'
 import logoMenu from './assets/LOGO menu.png'
 import logo from './assets/LOGO.png'
 import banner from './assets/Banner.png'
-import goldenFire from './assets/GoldenFire.png'
 import ElectricButton from './ElectricButton'
-import ProjectModal from './components/ProjectModal'
+import Inicio from './pages/Inicio'
+import SobreMim from './pages/SobreMim'
+import Projetos from './pages/Projetos'
+import Habilidades from './pages/Habilidades'
+import Experiencia from './pages/Experiencia'
+import Servicos from './pages/Servicos'
+import Depoimentos from './pages/Depoimentos'
+import Contato from './pages/Contato'
 import './App.css'
 
-const skills = [
-  { name: 'Desenvolvimento Web', level: 90 },
-  { name: 'Desenvolvimento Mobile', level: 60 },
-  { name: 'HTML / CSS / JavaScript', level: 90 },
-  { name: 'React / Next.js', level: 85 },
-  { name: 'UI / UX Design', level: 80 },
-  { name: 'Node.js / PostgreSQL', level: 70 },
-  { name: 'React Native', level: 60 },
-]
-
-const projects = [
+const navItems = [
   {
-    title: 'Golden Fire',
-    desc: 'Projeto completo com design moderno e soluções digitais de alto impacto.',
-    fullDesc: `Golden Fire é um projeto ambicioso que une tecnologia de ponta com design imersivo. Desenvolvido com Unreal Engine, Node.js e PostgreSQL, o sistema oferece uma experiência visual impressionante com renderização em tempo real e ambientes interativos.
-
-O backend foi construído com Node.js para garantir alta performance e escalabilidade, enquanto o PostgreSQL gerencia dados complexos de forma eficiente. A integração entre o motor gráfico e a API permite atualizações dinâmicas de conteúdo sem interromper a experiência do usuário.
-
-Entre as funcionalidades principais estão: sistema de autenticação seguro, painel administrativo completo, relatórios em tempo real, sistema de notificações push e suporte a múltiplos idiomas. O projeto foi entregue dentro do prazo e superou as expectativas do cliente em termos de performance e design.
-
-O resultado final é uma plataforma robusta, escalável e visualmente impactante que se destaca no mercado pela qualidade técnica e criativa.`,
-    tags: ['Unreal Engine 5.4', 'Node.js', 'PostgreSQL'],
-    image: goldenFire,
-    platforms: ['pc', 'mobile'],
+    id: 'inicio', label: 'Início',
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
   },
   {
-    title: 'App Exala',
-    desc: 'Aplicativo mobile com experiência fluida e interface intuitiva para o usuário.',
-    fullDesc: `App Exala é um aplicativo mobile desenvolvido com React Native e Node.js, voltado para conectar pessoas através de experiências culturais e eventos ao vivo. O app oferece uma interface fluida e intuitiva, projetada para funcionar perfeitamente tanto em iOS quanto em Android.
-
-O sistema de backend utiliza Node.js com arquitetura RESTful e banco de dados PostgreSQL, garantindo alta disponibilidade e segurança nos dados dos usuários. O app conta com autenticação via redes sociais, sistema de feed personalizado, notificações em tempo real e integração com mapas para localização de eventos.
-
-Funcionalidades implementadas: cadastro e login social, perfil de usuário customizável, busca por eventos e categorias, sistema de avaliações, chat entre usuários, pagamento in-app e histórico de atividades. O app foi lançado com excelente recepção do público, atingindo mais de 5.000 downloads na primeira semana.`,
-    tags: ['React Native', 'Node.js', 'PostgreSQL'],
-    platforms: ['mobile'],
+    id: 'sobre', label: 'Sobre Mim',
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
   },
   {
-    title: 'Sistema de Carteira',
-    desc: 'Sistema de gestão financeira com carteira digital, transações e relatórios.',
-    fullDesc: `Sistema de Carteira Digital é uma plataforma financeira completa desenvolvida com React JS, Node.js e PostgreSQL. O sistema permite que usuários gerenciem seu dinheiro de forma simples, segura e eficiente, com todas as funcionalidades de uma carteira digital moderna.
-
-A arquitetura foi projetada com foco em segurança, utilizando criptografia de ponta a ponta, autenticação em dois fatores e conformidade com as regulamentações financeiras vigentes. O painel administrativo oferece visão completa das transações, relatórios detalhados e ferramentas de análise financeira.
-
-Principais funcionalidades: depósitos e saques, transferências entre usuários, histórico completo de transações, relatórios exportáveis em PDF e Excel, sistema de limites e alertas, integração com bancos via Open Banking, suporte a múltiplas moedas e dashboard com gráficos interativos de gastos e receitas.`,
-    tags: ['React JS', 'Node.js', 'PostgreSQL'],
-    platforms: ['pc'],
+    id: 'projetos', label: 'Projetos',
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
   },
   {
-    title: 'E-commerce Oasis',
-    desc: 'Loja virtual completa com carrinho, filtros e integração com pagamentos.',
-    fullDesc: `E-commerce Oasis é uma loja virtual completa desenvolvida com React JS, Node.js e PostgreSQL, focada em oferecer a melhor experiência de compra online. O projeto foi criado do zero com atenção especial à performance, usabilidade e conversão de vendas.
-
-O frontend em React JS garante uma navegação rápida e fluida, com carregamento otimizado de imagens, filtros dinâmicos por categoria, preço e disponibilidade, e sistema de busca inteligente. O checkout foi simplificado para reduzir o abandono de carrinho e aumentar a taxa de conversão.
-
-Funcionalidades desenvolvidas: catálogo de produtos com variações, carrinho persistente, wishlist, sistema de cupons e promoções, múltiplos métodos de pagamento, rastreamento de pedidos em tempo real, painel do vendedor, gestão de estoque automatizada, avaliações de produtos, programa de fidelidade e integração com marketplaces. O projeto resultou em um aumento de 40% nas vendas do cliente.`,
-    tags: ['React JS', 'Node.js', 'PostgreSQL'],
-    platforms: ['pc'],
+    id: 'habilidades', label: 'Habilidades',
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+  },
+  {
+    id: 'experiencia', label: 'Experiência',
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+  },
+  {
+    id: 'servicos', label: 'Serviços',
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+  },
+  {
+    id: 'depoimentos', label: 'Depoimentos',
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  },
+  {
+    id: 'contato', label: 'Contato',
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
   },
 ]
+
 
 function App() {
-  const [selectedProject, setSelectedProject] = useState(null)
+  const [activePage, setActivePage] = useState('inicio')
 
   return (
-    <>
     <div className="layout">
       <aside className="sidebar">
         <img src={menuLateral} alt="Menu Lateral" />
@@ -80,9 +61,25 @@ function App() {
           <img src={logoMenu} alt="Logo" className="sidebar-logo" />
           <span className="sidebar-title">Portifólio</span>
         </div>
+
+        <nav className="sidebar-nav">
+          {navItems.map(item => (
+            <button
+              key={item.id}
+              className={`nav-item${activePage === item.id ? ' active' : ''}`}
+              onClick={() => setActivePage(item.id)}
+            >
+              {item.icon}
+              {item.label}
+            </button>
+          ))}
+        </nav>
+
         <div className="sidebar-footer">
           <div className="sidebar-profile">
-            <div className="sidebar-avatar"><img src={logo} alt="Logo" /></div>
+            <div className="sidebar-avatar">
+              <img src={logo} alt="Logo" />
+            </div>
             <div className="sidebar-profile-info">
               <span className="sidebar-profile-name">Tiago Bonassa</span>
               <span className="sidebar-profile-role">Desenvolvedor & Criador Digital</span>
@@ -113,6 +110,7 @@ function App() {
           </div>
         </div>
       </aside>
+
       <div className="main-area">
         <header className="topbar">
           <div className="search-wrapper">
@@ -124,141 +122,38 @@ function App() {
           </div>
           <img src={logo} alt="Logo" className="topbar-logo" />
         </header>
-        <main className="content">
-          <div className="banner-wrapper">
-            <div className="banner-inner">
-              <img src={banner} alt="Banner" className="banner" />
-              <div className="banner-overlay">
-                <p className="banner-suptitle">OLÁ, EU SOU</p>
-                <h1 className="banner-name">Tiago Bonassa<span className="dot">.</span></h1>
-                <p className="banner-role">Desenvolvedor & Criador Digital</p>
-                <p className="banner-desc">Transformo ideias em experiências digitais incríveis.<br />Especialista em desenvolvimento web, design de interfaces<br />e soluções que geram resultados.</p>
-                <div className="banner-actions">
-                  <ElectricButton className="btn-primary">⬇ Baixar Currículo</ElectricButton>
-                  <button className="btn-secondary">Entrar em Contato</button>
-                </div>
-                <p className="banner-available"><span className="dot-green"></span> Disponível para novos projetos</p>
+
+        <div className="banner-wrapper">
+          <div className="banner-inner">
+            <img src={banner} alt="Banner" className="banner" />
+            <div className="banner-overlay">
+              <p className="banner-suptitle">OLÁ, EU SOU</p>
+              <h1 className="banner-name">Tiago Bonassa<span className="dot">.</span></h1>
+              <p className="banner-role">Desenvolvedor & Criador Digital</p>
+              <p className="banner-desc">Transformo ideias em experiências digitais incríveis.<br />Especialista em desenvolvimento web, design de interfaces<br />e soluções que geram resultados.</p>
+              <div className="banner-actions">
+                <ElectricButton className="btn-primary">⬇ Baixar Currículo</ElectricButton>
+                <button className="btn-secondary">Entrar em Contato</button>
               </div>
+              <p className="banner-available"><span className="dot-green"></span> Disponível para novos projetos</p>
             </div>
           </div>
+        </div>
 
-          {/* Sobre / Habilidades / Informações */}
-          <div className="info-grid">
-            <div className="info-card">
-              <h3 className="info-title">SOBRE MIM</h3>
-              <p className="info-text">Sou apaixonado por tecnologia e inovação. Trabalho há mais de 10 anos desenvolvendo soluções digitais que ajudam marcas e negócios a se destacarem no mundo online.</p>
-              <p className="info-text">Meu foco é criar projetos funcionais, bonitos e com propósito.</p>
-              <p className="info-text">Atualmente trabalho como desenvolvedor no Ministério da Fazenda.</p>
-              <div className="info-stats">
-                <div className="stat">
-                  <span className="stat-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                      <rect x="3" y="4" width="18" height="18" rx="2"/>
-                      <line x1="16" y1="2" x2="16" y2="6"/>
-                      <line x1="8" y1="2" x2="8" y2="6"/>
-                      <line x1="3" y1="10" x2="21" y2="10"/>
-                    </svg>
-                  </span>
-                  <div><strong>5+ Anos</strong><span>Experiência</span></div>
-                </div>
-                <div className="stat">
-                  <span className="stat-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M12 21C12 21 5 13.5 5 9a7 7 0 0 1 14 0c0 4.5-7 12-7 12z"/>
-                      <circle cx="12" cy="9" r="2.5"/>
-                    </svg>
-                  </span>
-                  <div><strong>Brasil</strong><span>Localização</span></div>
-                </div>
-                <div className="stat">
-                  <span className="stat-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/>
-                      <path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
-                    </svg>
-                  </span>
-                  <div><strong>5+</strong><span>Projetos Entregues</span></div>
-                </div>
-              </div>
-            </div>
-
-            <div className="info-card">
-              <h3 className="info-title">HABILIDADES</h3>
-              <div className="skills-list">
-                {skills.map((s) => (
-                  <div key={s.name} className="skill-item">
-                    <div className="skill-header">
-                      <span>{s.name}</span>
-                      <span>{s.level}%</span>
-                    </div>
-                    <div className="skill-bar">
-                      <div className="skill-fill" style={{ width: `${s.level}%` }} />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="info-card">
-              <h3 className="info-title">INFORMAÇÕES</h3>
-              <ul className="contact-list">
-                <li><span className="contact-icon">✉</span> thiagobonassa@hotmail.com</li>
-                <li><span className="contact-icon">📞</span> 48 99189-3348</li>
-                <li><span className="contact-icon">📍</span> Santa Catarina, Brasil</li>
-                <li><span className="contact-icon">🌐</span> www.dow.com.br</li>
-                <li><span className="contact-icon">📅</span> Disponível para projetos</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Projetos em Destaque */}
-          <div className="projects-section">
-            <div className="projects-header">
-              <h3 className="info-title">PROJETOS EM DESTAQUE</h3>
-              <a href="#" className="projects-link">Ver todos os projetos →</a>
-            </div>
-            <div className="projects-grid">
-              {projects.map((p) => (
-                <div key={p.title} className="project-card" onClick={() => setSelectedProject(p)}>
-                  <div className="project-thumb">
-                    {p.image && <img src={p.image} alt={p.title} />}
-                  </div>
-                  <div className="project-info">
-                    <div className="project-title-row">
-                      <h4 className="project-title">{p.title}</h4>
-                      {p.platforms && (
-                        <div className="project-platforms">
-                          {p.platforms.includes('pc') && (
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                              <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
-                            </svg>
-                          )}
-                          {p.platforms.includes('mobile') && (
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                              <rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>
-                            </svg>
-                          )}
-                        </div>
-                      )}
-                    </div>
-                    <p className="project-desc">{p.desc}</p>
-                    <div className="project-tags">
-                      {p.tags.map((t) => (
-                        <span key={t} className="tag">{t}</span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-        </main>
+        <div className="page-wrapper">
+          {{
+            inicio: <Inicio onNavigate={setActivePage} />,
+            sobre: <SobreMim />,
+            projetos: <Projetos />,
+            habilidades: <Habilidades />,
+            experiencia: <Experiencia />,
+            servicos: <Servicos />,
+            depoimentos: <Depoimentos />,
+            contato: <Contato />,
+          }[activePage]}
+        </div>
       </div>
     </div>
-
-    <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
-    </>
   )
 }
 
