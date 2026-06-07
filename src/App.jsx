@@ -131,9 +131,10 @@ function App() {
               <h1 className="banner-name">Tiago Bonassa<span className="dot">.</span></h1>
               <p className="banner-role">Desenvolvedor & Criador Digital</p>
               <p className="banner-desc">Transformo ideias em experiências digitais incríveis.<br />Especialista em desenvolvimento web, design de interfaces<br />e soluções que geram resultados.</p>
+              <p className="banner-tech-badge">PÁGINA DESENVOLVIDA COM <span>React</span>/<span>JavaScript</span></p>
               <div className="banner-actions">
                 <ElectricButton className="btn-primary">⬇ Baixar Currículo</ElectricButton>
-                <button className="btn-secondary">Entrar em Contato</button>
+                <button className="btn-secondary"><span>Entrar em Contato</span></button>
               </div>
               <p className="banner-available"><span className="dot-green"></span> Disponível para novos projetos</p>
             </div>
