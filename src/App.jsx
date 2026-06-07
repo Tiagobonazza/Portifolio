@@ -7,7 +7,6 @@ import ElectricButton from './ElectricButton'
 import Inicio from './pages/Inicio'
 import SobreMim from './pages/SobreMim'
 import Projetos from './pages/Projetos'
-import Habilidades from './pages/Habilidades'
 import Experiencia from './pages/Experiencia'
 import Servicos from './pages/Servicos'
 import './App.css'
@@ -24,10 +23,6 @@ const navItems = [
   {
     id: 'projetos', label: 'Projetos',
     icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-  },
-  {
-    id: 'habilidades', label: 'Habilidades',
-    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
   },
   {
     id: 'experiencia', label: 'Experiência',
@@ -136,7 +131,6 @@ function App() {
             inicio: <Inicio onNavigate={setActivePage} />,
             sobre: <SobreMim />,
             projetos: <Projetos />,
-            habilidades: <Habilidades />,
             experiencia: <Experiencia />,
             servicos: <Servicos />,
           }[activePage]}
