@@ -53,6 +53,7 @@ function App() {
               key={item.id}
               className={`nav-item${activePage === item.id ? ' active' : ''}`}
               onClick={() => setActivePage(item.id)}
+              translate="no"
             >
               {item.icon}
               {item.label}

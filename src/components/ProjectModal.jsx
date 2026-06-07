@@ -28,6 +28,20 @@ export default function ProjectModal({ project, onClose }) {
                 <span key={t} className="tag">{t}</span>
               ))}
             </div>
+
+            {project.videoUrl && (
+              <a
+                href={project.videoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="modal-video-btn"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                  <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+                Ver Vídeo do Projeto
+              </a>
+            )}
           </div>
         </div>
       </div>

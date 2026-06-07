@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import goldenFire from '../assets/GoldenFire.png'
+import video1 from '../assets/Video1.mp4'
 import exala from '../assets/Exala.png'
 import carteira from '../assets/Carteira.png'
 import oasis from '../assets/Oasis.png'
@@ -29,6 +30,7 @@ O resultado final é uma plataforma robusta, escalável e visualmente impactante
     tags: ['Unreal Engine 5.4', 'Node.js', 'PostgreSQL'],
     image: goldenFire,
     platforms: ['pc', 'mobile'],
+    videoUrl: video1,
   },
   {
     title: 'App Exala',
