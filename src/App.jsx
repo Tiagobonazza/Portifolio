@@ -10,8 +10,6 @@ import Projetos from './pages/Projetos'
 import Habilidades from './pages/Habilidades'
 import Experiencia from './pages/Experiencia'
 import Servicos from './pages/Servicos'
-import Depoimentos from './pages/Depoimentos'
-import Contato from './pages/Contato'
 import './App.css'
 
 const navItems = [
@@ -38,14 +36,6 @@ const navItems = [
   {
     id: 'servicos', label: 'Serviços',
     icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-  },
-  {
-    id: 'depoimentos', label: 'Depoimentos',
-    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-  },
-  {
-    id: 'contato', label: 'Contato',
-    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
   },
 ]
 
@@ -97,7 +87,7 @@ function App() {
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
               </svg>
             </a>
-            <a href="#" aria-label="Instagram">
+            <a href="https://www.threads.com/@thiagobonassa?xmt=AQG0oNK5ikJPGB1svGNJYJEr8_JNN0_CEnBF9265L6qS2_Q" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
               </svg>
@@ -149,8 +139,6 @@ function App() {
             habilidades: <Habilidades />,
             experiencia: <Experiencia />,
             servicos: <Servicos />,
-            depoimentos: <Depoimentos />,
-            contato: <Contato />,
           }[activePage]}
         </div>
       </div>

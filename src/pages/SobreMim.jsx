@@ -4,97 +4,64 @@ export default function SobreMim() {
 
       <section className="sobre-section">
         <h2 className="sobre-section-title">Quem sou eu</h2>
-        <p className="sobre-text">Descrição pessoal aqui...</p>
+        <p className="sobre-text">
+          Tenho 38 anos, sou divorciado e pai de um filho de 6 anos que é minha maior motivação.
+          Sou apaixonado por tecnologia e inovação, mas minha vida vai muito além das telas.
+        </p>
+        <p className="sobre-text">
+          A velocidade faz parte de quem eu sou — participo de campeonatos de Kart e também ando de moto,
+          sempre buscando adrenalina com responsabilidade. No ar, tenho habilitação de piloto e gosto de
+          voar em aviões de pequeno porte, uma paixão que une técnica, liberdade e precisão. Em um período
+          da minha vida também saltei de paraquedas — mais uma experiência que reflete minha relação com
+          a altitude e a busca por sensações únicas.
+        </p>
+        <p className="sobre-text">
+          No lado mais tranquilo, toco violão — um contraponto ao ritmo acelerado do dia a dia,
+          onde encontro equilíbrio e criatividade.
+        </p>
       </section>
 
       <section className="sobre-section">
-        <h2 className="sobre-section-title">Experiência Profissional</h2>
+        <h2 className="sobre-section-title">Interesses & Hobbies</h2>
 
         <div className="sobre-card">
           <div className="sobre-card-header">
             <div>
-              <h3 className="sobre-card-title">Cargo / Função</h3>
-              <span className="sobre-card-sub">Empresa ou Cliente</span>
+              <h3 className="sobre-card-title">Automobilismo</h3>
+              <span className="sobre-card-sub">Campeonato de Kart</span>
             </div>
-            <span className="sobre-card-date">2020 — Atual</span>
           </div>
-          <p className="sobre-card-desc">Descrição das atividades e responsabilidades exercidas nessa função...</p>
-          <div className="sobre-tags">
-            <span className="tag">Tecnologia 1</span>
-            <span className="tag">Tecnologia 2</span>
-          </div>
+          <p className="sobre-card-desc">Participa ativamente de campeonatos de Kart, unindo paixão por velocidade, estratégia e competição.</p>
         </div>
 
         <div className="sobre-card">
           <div className="sobre-card-header">
             <div>
-              <h3 className="sobre-card-title">Cargo / Função</h3>
-              <span className="sobre-card-sub">Empresa ou Cliente</span>
+              <h3 className="sobre-card-title">Motociclismo</h3>
+              <span className="sobre-card-sub">Piloto de moto</span>
             </div>
-            <span className="sobre-card-date">2018 — 2020</span>
           </div>
-          <p className="sobre-card-desc">Descrição das atividades e responsabilidades exercidas nessa função...</p>
-          <div className="sobre-tags">
-            <span className="tag">Tecnologia 1</span>
-            <span className="tag">Tecnologia 2</span>
-          </div>
-        </div>
-
-      </section>
-
-      <section className="sobre-section">
-        <h2 className="sobre-section-title">Formação Acadêmica</h2>
-
-        <div className="sobre-card">
-          <div className="sobre-card-header">
-            <div>
-              <h3 className="sobre-card-title">Curso / Graduação</h3>
-              <span className="sobre-card-sub">Instituição de Ensino</span>
-            </div>
-            <span className="sobre-card-date">2015 — 2019</span>
-          </div>
-          <p className="sobre-card-desc">Descrição do curso e áreas de estudo...</p>
-        </div>
-
-      </section>
-
-      <section className="sobre-section">
-        <h2 className="sobre-section-title">Certificações</h2>
-
-        <div className="sobre-card">
-          <div className="sobre-card-header">
-            <div>
-              <h3 className="sobre-card-title">Nome da Certificação</h3>
-              <span className="sobre-card-sub">Plataforma ou Instituição</span>
-            </div>
-            <span className="sobre-card-date">2023</span>
-          </div>
-          <p className="sobre-card-desc">Descrição do que foi aprendido na certificação...</p>
+          <p className="sobre-card-desc">Apaixonado por motos, utiliza a moto como estilo de vida e meio de explorar liberdade nas estradas.</p>
         </div>
 
         <div className="sobre-card">
           <div className="sobre-card-header">
             <div>
-              <h3 className="sobre-card-title">Nome da Certificação</h3>
-              <span className="sobre-card-sub">Plataforma ou Instituição</span>
+              <h3 className="sobre-card-title">Aviação</h3>
+              <span className="sobre-card-sub">Piloto habilitado — aviões de pequeno porte</span>
             </div>
-            <span className="sobre-card-date">2022</span>
           </div>
-          <p className="sobre-card-desc">Descrição do que foi aprendido na certificação...</p>
+          <p className="sobre-card-desc">Possui habilitação de piloto e voa em aviões de pequeno porte por puro prazer, unindo técnica aeronáutica e a sensação única de voar.</p>
         </div>
-
-      </section>
-
-      <section className="sobre-section">
-        <h2 className="sobre-section-title">Idiomas</h2>
 
         <div className="sobre-card">
           <div className="sobre-card-header">
             <div>
-              <h3 className="sobre-card-title">Idioma</h3>
-              <span className="sobre-card-sub">Nível de proficiência</span>
+              <h3 className="sobre-card-title">Música</h3>
+              <span className="sobre-card-sub">Violão</span>
             </div>
           </div>
+          <p className="sobre-card-desc">Toca violão como forma de expressão e equilíbrio, encontrando na música um contraponto ao ritmo intenso da vida.</p>
         </div>
 
       </section>
