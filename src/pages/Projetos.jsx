@@ -46,6 +46,7 @@ Principais funcionalidades: depósitos e saques, transferências entre usuários
     tags: ['React JS', 'Node.js', 'PostgreSQL'],
     image: carteira,
     platforms: ['pc'],
+    siteUrl: 'https://walletgf.com/',
   },
   {
     title: 'E-commerce Oasis',
@@ -58,6 +59,7 @@ Funcionalidades desenvolvidas: catálogo de produtos com variações, carrinho p
     tags: ['React JS', 'Node.js', 'PostgreSQL'],
     image: oasis,
     platforms: ['pc'],
+    siteUrl: 'https://www.marleneoasis.com.br/',
   },
   {
     title: 'D.O.W',
