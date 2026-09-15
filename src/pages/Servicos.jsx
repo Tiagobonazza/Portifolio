@@ -42,6 +42,21 @@ export default function Servicos() {
           </div>
         </div>
 
+        <div className="sobre-card">
+          <div className="sobre-card-header">
+            <div>
+              <h3 className="sobre-card-title">E-commerce Oasis</h3>
+              <span className="sobre-card-sub">Loja virtual completa com carrinho, filtros e integração com pagamentos</span>
+            </div>
+            <span className="sobre-card-date" style={{color:'#22c55e'}}>Concluído</span>
+          </div>
+          <div className="sobre-tags">
+            <span className="tag">React JS</span>
+            <span className="tag">Node.js</span>
+            <span className="tag">PostgreSQL</span>
+          </div>
+        </div>
+
       </section>
 
       <section className="sobre-section">
@@ -67,21 +82,6 @@ export default function Servicos() {
             <div>
               <h3 className="sobre-card-title">Sistema de Carteira</h3>
               <span className="sobre-card-sub">Sistema de gestão financeira com carteira digital, transações e relatórios</span>
-            </div>
-            <span className="sobre-card-date" style={{color:'#f5c518'}}>Em desenvolvimento</span>
-          </div>
-          <div className="sobre-tags">
-            <span className="tag">React JS</span>
-            <span className="tag">Node.js</span>
-            <span className="tag">PostgreSQL</span>
-          </div>
-        </div>
-
-        <div className="sobre-card">
-          <div className="sobre-card-header">
-            <div>
-              <h3 className="sobre-card-title">E-commerce Oasis</h3>
-              <span className="sobre-card-sub">Loja virtual completa com carrinho, filtros e integração com pagamentos</span>
             </div>
             <span className="sobre-card-date" style={{color:'#f5c518'}}>Em desenvolvimento</span>
           </div>
