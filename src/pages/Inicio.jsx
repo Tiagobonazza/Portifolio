@@ -13,7 +13,7 @@ const skills = [
   { name: 'React / Next.js', level: 85 },
   { name: 'UI / UX Design', level: 80 },
   { name: 'Node.js / PostgreSQL', level: 90 },
-  { name: 'React Native', level: 60 },
+  { name: 'C++', level: 35 },
 ]
 
 const projects = [
@@ -78,7 +78,7 @@ export default function Inicio({ onNavigate }) {
       <div className="info-grid">
         <div className="info-card">
           <h3 className="info-title">SOBRE MIM</h3>
-          <p className="info-text">Sou apaixonado por tecnologia e inovação. Trabalho há mais de 5 anos desenvolvendo soluções digitais que ajudam marcas e negócios a se destacarem no mundo online.</p>
+          <p className="info-text">Sou apaixonado por tecnologia e inovação. Trabalho há mais de 10 anos desenvolvendo soluções digitais que ajudam marcas e negócios a se destacarem no mundo online.</p>
           <p className="info-text">Meu foco é criar projetos funcionais, bonitos e com propósito.</p>
           <div className="info-stats">
             <div className="stat">
@@ -87,7 +87,7 @@ export default function Inicio({ onNavigate }) {
                   <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
                 </svg>
               </span>
-              <div><strong>5+ Anos</strong><span>Experiência</span></div>
+              <div><strong>10+ Anos</strong><span>Experiência</span></div>
             </div>
             <div className="stat">
               <span className="stat-icon">
