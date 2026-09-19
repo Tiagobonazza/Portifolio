@@ -73,7 +73,7 @@ export default function Inicio({ onNavigate }) {
             <li><span className="contact-icon">✉</span> thiagobonassa@hotmail.com</li>
             <li><span className="contact-icon">📞</span> 48 99189-3348</li>
             <li><span className="contact-icon">📍</span> Santa Catarina, Brasil</li>
-            <li><span className="contact-icon">🌐</span> www.dow.com.br</li>
+            <li><span className="contact-icon">🌐</span> www.tb-port.com</li>
             <li><span className="contact-icon">📅</span> Disponível para projetos</li>
           </ul>
         </div>
