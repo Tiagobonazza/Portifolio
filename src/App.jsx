@@ -146,7 +146,14 @@ function App() {
               <p className="banner-tech-badge">PÁGINA DESENVOLVIDA COM <span>React</span>/<span>JavaScript</span></p>
               <div className="banner-actions">
                 <ElectricButton className="btn-primary">⬇ Baixar Currículo</ElectricButton>
-                <button className="btn-secondary"><span>Entrar em Contato</span></button>
+                <a
+                  href="https://wa.me/5548991893348"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary"
+                >
+                  <span>Entrar em Contato</span>
+                </a>
               </div>
               <p className="banner-available"><span className="dot-green"></span> Disponível para novos projetos</p>
             </div>
