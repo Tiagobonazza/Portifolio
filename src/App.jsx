@@ -3,6 +3,7 @@ import menuLateral from './assets/Menu Lateral.png'
 import logoMenu from './assets/LOGO menu.png'
 import logo from './assets/LOGO.png'
 import banner from './assets/Banner.png'
+import bannerMobile from './assets/Banner-Mobile.png'
 import ElectricButton from './ElectricButton'
 import Inicio from './pages/Inicio'
 import SobreMim from './pages/SobreMim'
@@ -37,10 +38,32 @@ const navItems = [
 
 function App() {
   const [activePage, setActivePage] = useState('inicio')
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const handleNavigate = (id) => {
+    setActivePage(id)
+    setMenuOpen(false)
+  }
 
   return (
     <div className="layout">
-      <aside className="sidebar">
+      <button
+        className="mobile-menu-toggle"
+        aria-label="Abrir menu"
+        onClick={() => setMenuOpen((v) => !v)}
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          {menuOpen ? (
+            <><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></>
+          ) : (
+            <><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></>
+          )}
+        </svg>
+      </button>
+
+      {menuOpen && <div className="sidebar-backdrop" onClick={() => setMenuOpen(false)} />}
+
+      <aside className={`sidebar${menuOpen ? ' open' : ''}`}>
         <img src={menuLateral} alt="Menu Lateral" />
         <div className="sidebar-header">
           <img src={logoMenu} alt="Logo" className="sidebar-logo" />
@@ -52,7 +75,7 @@ function App() {
             <button
               key={item.id}
               className={`nav-item${activePage === item.id ? ' active' : ''}`}
-              onClick={() => setActivePage(item.id)}
+              onClick={() => handleNavigate(item.id)}
               translate="no"
             >
               {item.icon}
@@ -111,7 +134,10 @@ function App() {
 
         <div className="banner-wrapper">
           <div className="banner-inner">
-            <img src={banner} alt="Banner" className="banner" />
+            <picture>
+              <source media="(max-width: 768px)" srcSet={bannerMobile} />
+              <img src={banner} alt="Banner" className="banner" />
+            </picture>
             <div className="banner-overlay">
               <p className="banner-suptitle">OLÁ, EU SOU</p>
               <h1 className="banner-name">Tiago Bonassa<span className="dot">.</span></h1>
