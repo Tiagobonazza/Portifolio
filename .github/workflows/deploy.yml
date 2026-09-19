@@ -21,3 +21,14 @@ jobs:
             git pull origin master
             npm install
             npm run build
+            rm -rf /home/tb-port.com/public_html/*
+            cp -r dist/* /home/tb-port.com/public_html/
+            cat > /home/tb-port.com/public_html/.htaccess << 'HTACCESS'
+            RewriteEngine On
+            RewriteCond %{REQUEST_FILENAME} !-f
+            RewriteCond %{REQUEST_FILENAME} !-d
+            RewriteRule ^ index.html [L]
+            HTACCESS
+            chown -R tbpor2961:tbpor2961 /home/tb-port.com/public_html
+            find /home/tb-port.com/public_html -type d -exec chmod 755 {} \;
+            find /home/tb-port.com/public_html -type f -exec chmod 644 {} \;
